@@ -1,0 +1,172 @@
+.header
+    background: $color-white
+    box-shadow: 1px 6px 6px 3px rgba(0,0,0,0.14)
+    -webkit-box-shadow: 1px 6px 6px 3px rgba(0,0,0,0.14)
+    -moz-box-shadow: 1px 6px 6px 3px rgba(0,0,0,0.14)
+    position: fixed
+    z-index: 10
+    top: 5rem
+    height: 9rem
+    z-index: 100
+    width: 1140px
+    @include respond(big-screen)
+        width: 1510px
+    @include respond(tab-land)
+        max-width: 850px
+        height: 7rem
+    @include respond(tab-port)
+        max-width: 720px
+    @include respond(phone)
+        max-width: 521px
+    @include respond(min-phone)
+        width: 586px
+    @include respond(minim-phone)
+        width: 410px
+    @include respond(minimum-phone)
+        width: 320px
+    
+    &__menu
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 100
+        width: 1100px
+        padding-left: 5rem
+        @include respond(big-screen)
+            width: 1510px
+        @include respond(tab-land)
+            max-width: 850px
+            padding-top: 1rem
+        @include respond(tab-port)
+            max-width: 720px
+            padding-top: 1rem
+            padding-left: 0rem
+        @include respond(phone)
+            max-width: 521px
+        @include respond(min-phone)
+            width: 586px
+        @include respond(minim-phone)
+            width: 410px
+        @include respond(minimum-phone)
+            width: 320px
+    &__newList
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+    &__mainMenu
+        width: 55rem
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        z-index: 10
+        margin-right: 2rem
+        @include respond(big-screen)
+            width: 65rem
+        @include respond(tab-port)
+            width: 45rem
+
+    &__hr
+        background-color: $color-dark-blue
+        width: 100%
+        @include respond(phone)
+            display: none
+        
+     
+    
+    &__logo
+        width: 23rem
+        height: 9rem
+        padding: 0.5rem 0
+        z-index: 100
+        @include respond(tab-land)
+            display: none
+    &__link
+        margin-right: 3rem
+        text-decoration: none
+        color: $color-text
+        font-size: $font-size
+        font-style: normal
+        font-weight: 500
+        line-height: 17.6px
+        text-transform: uppercase
+        text-shadow: 2px 2px 2px rgba(51,51,51,0.15)
+        transition: all .2s linear
+        @include respond(tab-land)
+            font-size: 1.5rem
+        @include respond(tab-port)
+            font-size: 1.2rem
+
+        &:last-child
+            margin-right: 0rem
+        &:hover
+            color: $color-gold
+            transform: translateY(-.1rem) scaleX(1.1)
+            font-size: 1.7rem
+            @include respond(tab-port)
+                font-size: 1.4rem
+                transform: translateY(-.1rem) scaleX(1)
+        &:active
+            transform: translateY(0rem)
+
+
+.header-burger
+    display: none
+.hr
+    display: flex
+    justify-content: center
+
+@include respond(phone)
+    body
+        lock
+            overflow: hidden
+    .header
+        height: 0rem
+        box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.14)
+        display: flex
+        justify-content: center
+        @include respond(minimum-phone)
+            justify-content: flex-start
+        &__mainMenu
+            position: fixed
+            top: 5.5rem
+            left: 100%
+            width: 100%
+            height: 100%
+            background-color: $color-blue
+            z-index: 3
+            display: flex
+            flex-direction: column
+            align-items: center
+            transition: all .5s ease 0s
+            overflow: auto
+            opacity: 1
+            justify-content: flex-start
+            padding-top: 10rem
+            
+        &__link
+            color: $color-white
+            margin-bottom: 6rem
+            font-size: 3.8rem
+            @media (max-width:490px)
+                font-size: 3rem
+        &__list
+            width: 100%
+            background-color: $color-white
+            height: 0rem
+            display: block
+            z-index: 100
+        &__newList
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-top: 5rem
+            @include respond(minimum-phone)
+                justify-content: flex-start
+       
+    
+
+   
+     
+.active-menu
+    left: 0

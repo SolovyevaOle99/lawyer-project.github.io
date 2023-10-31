@@ -1,0 +1,21 @@
+.pre-header
+    background: $color-dark-blue
+    position: fixed
+    z-index: 110
+    height: 1.5rem
+    width: 1140px
+    @include respond(big-screen)
+        width: 1510px
+    @include respond(tab-land)
+        max-width: 850px
+    @include respond(tab-port)
+        max-width: 720px
+    @include respond(phone)
+        max-width: 521px
+    @include respond(min-phone)
+        width: 586px
+    @include respond(minim-phone)
+        width: 410px
+    @include respond(minimum-phone)
+        width: 320px
+

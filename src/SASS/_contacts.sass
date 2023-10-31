@@ -1,0 +1,107 @@
+.contacts
+    background: $color-white
+    position: fixed
+    z-index: 10
+    width: 1140px
+    @include respond(big-screen)
+        width: 1510px
+    @include respond(tab-land)
+        max-width: 850px
+    @include respond(tab-port)
+        max-width: 720px
+    @include respond(phone)
+        max-width: 521px
+    @include respond(min-phone)
+        width: 586px
+    @include respond(minim-phone)
+        width: 410px
+    @include respond(minimum-phone)
+        width: 320px
+
+    &__menu
+        display: flex
+        justify-content: center
+        justify-content: center
+        align-items: center
+        height: 5rem
+        padding-top: 1rem
+        @include respond(phone)
+            padding-top: 3rem
+            height: 3.6rem
+
+    &__icons
+        margin-right: 0.5rem
+        width: 2rem
+    &__li
+        list-style-type: none
+        color: $color-text
+        margin-right: 3rem
+        margin-top: .5rem
+        font-style: normal
+        font-weight: 500
+        line-height: 17.6px
+        font-size: 1.3rem
+        text-shadow: 2px 2px 2px rgba(51,51,51,0.15)
+        @include respond(big-screen)
+            margin-right: 12rem
+        @include respond(tab-port)
+            font-size: 1.2rem
+
+        &:last-child
+            margin-right: 0rem
+            @include respond(phone)
+                display: none
+    &__li-div
+        display: flex
+        align-items: center
+        justify-content: center
+        
+         
+@include respond(minimum-phone)
+    .close-link
+        display: none
+
+@include respond(phone)
+    .contacts-burger
+        display: block
+        position: relative
+        width: 3rem
+        height: 2rem
+        z-index: 100
+        left: 93%
+        top: -1.15rem
+        cursor: pointer
+
+        span
+            position: absolute
+            background-color: $color-dark-blue
+            width: 100%
+            height: .2rem
+            left: 0
+            top: .9rem
+            transition: all .5s ease 0s
+        &::before, &::after
+            content: ""
+            background-color: $color-dark-blue
+            position: absolute
+            width: 100%
+            height: .2rem
+            left: 0
+            transition: all .5s ease 0s
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+   
+     
+
+.active-burger
+    &::before
+        transform: rotate(45deg)
+        top: .9rem
+    &::after
+        transform: rotate(-45deg)
+        bottom: .9rem
+    span
+        transition: all .4s
+        transform: scale(0)

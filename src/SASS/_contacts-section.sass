@@ -1,0 +1,54 @@
+.contacts-section
+    display: flex
+    justify-content: space-between
+    margin-bottom: 6rem
+    @include respond(phone)
+        justify-content: space-around
+
+    &__contacts
+        display: flex
+        margin-right: 22rem
+        @include respond(tab-land)
+            margin-right: 2rem
+         
+        a
+            text-decoration: none
+    &__list
+        margin-right: 10rem
+        @include respond(tab-land)
+            margin-right: 0rem
+    &__logo_img
+        width: 30rem
+        height: 12rem
+        @include respond(tab-port)
+            display: none
+ 
+    &__li
+        list-style: none
+    &__li-div
+        display: flex
+        justify-content: flex-start
+        width: 30rem
+        margin-bottom: 1rem
+    &__icons
+        a
+            img
+                @include respond(phone)
+                    width: 6rem
+        
+    &__header
+        font-family: 'Playfair Display', serif
+        font-size: 2.5rem
+        font-weight: 500
+        line-height: 1.5
+        color: $color-dark-blue
+        margin-bottom: 2rem
+.hr_1
+        width: 65%
+        border: .1px solid $color-dark-blue
+        margin-bottom: 2rem
+
+.hr_2
+        width: 100%
+        border: .1px solid $color-dark-blue
+        margin-bottom: 2rem

@@ -1,0 +1,63 @@
+.main
+    overflow: hidden
+    height: 85rem
+    background:  linear-gradient(125deg, rgba(249,249,249,0.7988445378151261) 0%, rgba(255,255,255,0.8016456582633054) 5%, rgba(17,52,119,0.8352591036414566) 100%), url("../img/img-building.jpg") center / cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    position: relative
+    margin: 0 auto
+    padding-top: 14rem
+    @include respond(big-screen)
+        height: 85rem
+    @include respond(tab-land)
+        padding-top: 12rem
+    @include respond(phone)
+        padding-top: 8rem
+    @include respond(min-phone)
+        padding-top: 5rem
+    @include respond(minim-phone)
+        padding-top: 5rem
+        height: 80rem
+    @include respond(minimum-phone)
+        padding-top: 5rem
+        height: 70rem
+  
+    &__text
+        width: 65rem
+        color: $color-dark-blue
+        margin-left: 12%
+        padding-top: 5rem
+        @include respond(minimum-phone)
+            width: 43rem
+    
+        h2
+            font-size: 7rem
+            font-weight: 500
+            line-height: 1.5
+            margin-bottom: 1rem
+            font-family: 'Playfair Display', serif
+            @include respond(minim-phone)
+                margin-bottom: 4rem
+            @include respond(minimum-phone)
+                font-size: 5rem
+
+        p
+            font-family: 'Playfair Display', serif
+            font-size: 2.3rem
+            font-weight: 500
+            line-height: 1.5
+            
+              
+  
+.section1
+    margin-top: 5rem
+    @include respond(minim-phone)
+        margin-top: 8rem
+
+
+
+.btnSize
+    padding: 2.1rem 3.5rem
+    cursor: pointer
+    @include respond(minim-phone)
+        padding: 2.5rem 3.5rem
+    

@@ -1,0 +1,57 @@
+.work-steps
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-bottom: 10rem
+   
+    
+    h2
+        font-family: 'Playfair Display', serif
+        font-size: 4.5rem
+        font-weight: 500
+        line-height: 1.5
+        color: $color-dark-blue
+        margin-bottom: 6rem
+    &__div
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        
+    &__step
+        width: 18rem
+        height: 18rem
+        color: $color-white
+        border: 1px solid $color-gold
+        border-radius: 2rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-right: 3rem
+        padding: 1.5rem 1.5rem
+        @include respond(tab-land)
+            margin-bottom: 3rem
+        @include respond(phone)
+            width: 21rem
+            height: 21rem
+        
+
+            
+
+
+    &__icon
+        margin-bottom: 1rem
+        @include respond(minim-phone)
+            width: 7rem 
+    &__text
+        color: $color-dark-blue
+        font-family: 'Playfair Display', serif
+        font-size: 1.8rem
+        font-weight: 500
+        line-height: 1.5
+        text-align: center
+       
+.documents
+    width: 5.5rem

@@ -1,0 +1,77 @@
+.about-me
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 10rem
+    padding-top: 16rem
+    margin-bottom: 5rem
+    @include respond(tab-land)
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    &__text
+        width: 50rem
+        height: 70rem
+        margin-right: 8rem
+        border: 1px solid $color-gold
+        border-radius: 2rem
+        padding: 2rem 5rem
+        @include respond(tab-land)
+            margin-right: 0rem
+            width: 65rem
+            height: 60rem
+            margin-bottom: 8rem
+        @include respond(minim-phone)
+            width: 60rem
+        @include respond(minimum-phone)
+            width: 52rem
+    
+    &__list
+        display: flex
+        margin-bottom: 2rem
+        align-items: center
+    &__icons
+        width: 2.2rem
+        height: 2rem
+        margin-right: 2rem
+    
+    &__text h3
+        font-family: 'Playfair Display', serif
+        font-size: 4.5rem
+        font-weight: 500
+        line-height: 1.5
+        margin-bottom: 3rem
+    &__text p
+        font-size: 2.2rem
+        font-weight: 400
+        line-height: 1.5
+    &__photo
+        display: flex
+        align-items: center
+        width: 56rem
+        height: 70rem
+        overflow: hidden
+        @include respond(tab-land)
+            width: 65rem
+            height: 60rem
+        @include respond(minim-phone)
+            width: 60rem
+        @include respond(minimum-phone)
+            width: 52rem
+
+
+    &__photo img
+        border-radius: 3rem
+        width: 56rem
+        height: 45rem
+        @include respond(tab-land)
+            width: 65rem
+            height: 60rem
+        @include respond(minim-phone)
+            width: 60rem
+        @include respond(minimum-phone)
+            width: 52rem
+
+
+        

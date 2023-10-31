@@ -1,0 +1,63 @@
+.btn
+    &, &:link, &:visited
+        text-transform: uppercase
+        border-radius: 100px
+        color: $color-white
+        line-height: normal
+        text-decoration: none
+        background-color: $color-gold
+        transition: all .4s
+    &:hover
+        transform: translateY(-3px) scaleX(1.01) scaleY(1.01)
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+        &::after
+            transform: scaleX(1.4) scaleY(1.6)
+            opacity: 0
+    &:active
+        transform: translateY(-1px)
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    &::after
+        content: ""
+        height: 100%
+        width: 100%
+        border-radius: 100px
+        transition: all .4s
+        background-color: $color-gold
+
+
+
+.mainSize
+    padding: 15px 27px
+    font-size: 1.9rem
+    @include respond(phone)
+        display: none
+
+.minSize
+    font-size: 1.9rem
+    @include respond(tab-land)
+        font-size: 1.5rem
+    @include respond(tab-port)
+        font-size: 1.5rem
+    @media (max-width:800px)
+        padding: 15px 15px
+    &, &:link, &:visited
+        border-radius: 100px
+        @media (max-width:800px)
+            font-size: 1.5rem
+        
+    &:hover
+        transform: translateY(-3px) scaleX(1.01) scaleY(1.01)
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+        &::after
+            transform: scaleX(1.4) scaleY(1.6)
+            opacity: 0
+    &:active
+        transform: translateY(-1px)
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+    &::after
+        content: ""
+        height: 100%
+        width: 100%
+        border-radius: 100px
+        transition: all .4s
+        background-color: $color-gold

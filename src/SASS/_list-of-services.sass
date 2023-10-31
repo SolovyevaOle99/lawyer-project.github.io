@@ -1,0 +1,111 @@
+.list-of-services
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-top: 20rem
+    margin-bottom: 10rem
+    padding-top: 14rem
+    h2
+        font-family: 'Playfair Display', serif
+        font-size: 4.5rem
+        font-weight: 500
+        line-height: 1.5
+        color: $color-dark-blue
+        margin-bottom: 5rem
+    &__cards
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+    
+
+
+.service
+    width: 30rem
+    margin-right: 6rem
+    margin-bottom: 12rem
+    @include respond(tab-port)
+        margin-right: 4rem
+        margin-left: 0rem
+    @include respond(phone)
+        margin-right: 4rem
+        margin-left: 4rem
+
+    &__card
+        height: 30rem
+        perspective: 150rem
+        -moz-perspective: 150rem
+        position: relative
+  
+        &__side
+            height: 38rem
+            transition: .8s all ease-out
+            color: white
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            backface-visibility: hidden
+            box-shadow: 0 0 0 0.22rem rgba(158, 158, 158, 0.25)
+            border-radius: .5rem 
+            overflow: hidden
+ 
+            &_back
+                background: linear-gradient(135deg, $color-gold, $color-white ) 
+                transform: rotateY(180deg)
+                display: flex
+                justify-content: center
+                text-align: center
+
+        &:hover &__side_front
+            transform: rotateY(-180deg)
+        &:hover &__side_back
+            transform: rotateY(0deg)
+        
+        &__img
+            background-blend-mode: hard-light
+            height: 20rem
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+            z-index: 30
+            position: relative
+  
+            &_1
+                background: $color-gold url("../img/img-1.jpg") center / cover no-repeat
+            &_2
+                background: $color-gold url("../img/img-1.jpg") center / cover no-repeat
+            &_3
+                background: $color-gold url("../img/img-1.jpg") center / cover no-repeat
+        
+        &__title
+            color: $color-dark-blue
+            font-family: 'Playfair Display', serif
+            text-align: center
+            font-size: 2.8rem
+            font-weight: 600
+            line-height: normal
+            letter-spacing: .2rem
+            position: absolute
+            top: 14rem
+            z-index: 0
+     
+        &__span
+            background: linear-gradient(135deg, $color-gold, $color-white ) 
+            height: 31rem
+            width: 30rem
+            padding: 7rem 2rem
+    
+   
+        &__price-box
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 100%
+            transform: translate(-50%, -50%)
+       
+
+.listButSize
+    font-size: 2.2rem
+    padding: 3.1rem 1.8rem
+    cursor: pointer   
+
